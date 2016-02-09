@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Tabbed-Input Example</title>
+    <link rel="stylesheet" href="example.css">
+    <style>
+
+        .content{
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .content div{
+            margin: 12px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="content" ng-controller="BasicController as vm">
+
+        <div>
+
+            Model:
+
+            <div ng-repeat="(key, value) in vm.attributes">
+                {{key + ' : ' + value}}
+            </div>
+
+        </div>
+
+        <div>
+
+            Tabbed-Input:
+            <tabbed-input tab-data="vm.attributes"></tabbed-input>
+
+        </div>
+
+    </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="../src/tabbed-input.js"></script>
+<script>
+
+    var sampleApp = angular.module( "sampleApp", [ "tabbedInput" ] );
+
+    sampleApp.controller( "BasicController", BasicController );
+
+    function BasicController(){
+
+        var self = this;
+
+        self.attributes = {
+
+            "EN": "",
+            "TR": "",
+            "ES": ""
+
+        };
+
+        return self;
+
+    }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+
+.tabbed-input-container{
+    border: 2px solid #ccc;
+    padding: 2%;
+}
+
+.tabbed-input-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tabbed-input-container ul li {
+    display: inline;
+}
+
+.tabbed-input-container ul li a {
+    border: 2px solid #ccc;
+    color: black;
+    float: left;
+    display: block;
+    padding: 4px 10px;
+    margin-left: -1px;
+    position: relative;
+    left: 1px;
+    background: white;
+    text-decoration: none;
+}
+
+.tabbed-input-container ul li a:hover {
+    background: #bdc3c7;
+}
+
+.tabbed-input-container ul li a.tabbed-input-current {
+    background: #7f8c8d;
+    color: #ffffff;
+}
+
+.tabbed-input-container ul li a.tabbed-input-valid {
+    background: #16a085;
+    color: #ffffff;
+}
+
+.tabbed-input-container textarea{
+    clear: both;
+    position: relative;
+    width: 96%;
+    top: -2px;
+    display: block;
+    outline: none;
+    border: 2px solid #ccc;
+}
+
+.tabbed-input-container textarea:disabled{
+    background-color: #eee;
+}
